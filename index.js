@@ -157,12 +157,18 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
-
-    /*code here*/
-
+function filterByWord(arr, flavor){
+    newArr = [];
+    for(i = 0 ; i < arr.length ; i++){
+    if(arr[i].includes(flavor)){
+        newArr.push(arr[i]);
+    }
+    }
+    return newArr;
 }
 
+
+console.log(filterByWord(originalFlavors, "Chocolate"))
 
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
@@ -177,11 +183,11 @@ and should return the average number of words per item in the array.
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
-function getAverageWordLength(/*code here*/){
+//function getAverageWordLength(/*code here*/){
 
     /*code here*/
 
-}
+//}
 
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
